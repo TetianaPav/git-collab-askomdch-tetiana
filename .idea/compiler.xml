@@ -11,6 +11,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="git-collab-askomdch" target="11" />
+      <module name="pom7-circle-bdd" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>
