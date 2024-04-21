@@ -4,7 +4,7 @@ import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = {"src/test/java/com.askomdch/features"},
+        features = {"src/test/java/com/askomdch/features"},
         glue = {"com/askomdch/step_definitions", "com/askomdch/hooks"},
         dryRun = false,
         tags = "@smoke",
