@@ -1,0 +1,6 @@
+com/askomdch/runner/SmokeRunner.class
+com/askomdch/hooks/Hooks.class
+com/askomdch/step_definitions/AskOmDchLoginStepDefenitions.class
+com/askomdch/step_definitions/AskOmDchPlaceOrderStepsDefenitions.class
+com/askomdch/step_definitions/AskOmDchNewUserRegistrationStepDefinitions.class
+com/askomdch/runner/RegressionRunner.class
