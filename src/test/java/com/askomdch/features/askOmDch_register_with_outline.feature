@@ -13,7 +13,7 @@ Feature: AskOmDch User Registration Feature with Scenario Outline
 
     Examples:
       |   username      |      email                |   password    |
-      |	TChrOlivares4	|	TChrOlivares4@gmail.com	|	ChrOli21	|
+      |	TChrOlivares5	|	TChrOlivares5@gmail.com	|	ChrOli21	|
 #      |	TAleEstrella2	|	TAleEstrella2@gmail.com	|	AleEst21	|
 #      |	TNesDuong2	    |	TNesDuong2@gmail.com    |	NesDuo21	|
 #      |	TDayDelong2	    |	TDayDelong2@gmail.com   |	DayDel21	|
@@ -68,7 +68,7 @@ Feature: AskOmDch User Registration Feature with Scenario Outline
 
    Examples:
      |	 username 	    |	 email                    |	 password 	|	 firstname 	|	 lastname 	|	 company_name 	|	 country            	|	 street_address1	|	 street_address2 	|	 city    	|	 state 	|	 zip_code 	|	 phone    	|	 shipping_firstname 	|	 shipping_lastname 	|	 shipping_company_name 	|	 shipping_country     	|	 shipping_street_address1 	|	 shipping_street_address2 	|	 shipping_city 	|	 shipping_state 	|	 shipping_zip_code 	|
-     |	TLonSandlin4	|	TLonSandlin4@gmail.com    |	LonSan21	|	Long	    |	Sandlin	    |	LonSandlin COR	|	 United States (US) 	|	Manor Avenue	    |	 apt#321         	|	 Chicago 	|	 IL    	|	60008	    |	12345678	|	Willie	                |	Morin	            |	WMorin COR	            |	 United States (US) 	|	Queen Street	            |	 apt#43               	    |	 Apex      	    |	CA	                |	27516	            |
+     |	TLonSandlin5	|	TLonSandlin5@gmail.com    |	LonSan21	|	Long	    |	Sandlin	    |	LonSandlin COR	|	 United States (US) 	|	Manor Avenue	    |	 apt#321         	|	 Chicago 	|	 IL    	|	60008	    |	12345678	|	Willie	                |	Morin	            |	WMorin COR	            |	 United States (US) 	|	Queen Street	            |	 apt#43               	    |	 Apex      	    |	CA	                |	27516	            |
 #     |	TSeaHutto2	    |	TSeaHutto2@gmail.com	  |	SeaHut21	|	Seamus	    |	Hutto	    |	SeaHutto COR	|	 United States (US) 	|	Mill Lane	        |	 apt#123         	|	Vlurphis	|	 NC    	|	50008	    |	99999999	|	Keara	                |	Kasper	            |	KKasper COR	            |	 United States (US) 	|	Theater Way	                |	 apt#43               	    |	Ivlepool	    |	GA	                |	27517	            |
 #     |	TRhoFoote2	    |	TRhoFoote2@gmail.com	  |	RhoFoo21	|	Rhonda	    |	Foote	    |	RhoFoote COR	|	 United States (US) 	|	Gilded Street	    |	 apt#777         	|	Eprehbus	|	 IN    	|	55555	    |	44444444	|	Ann	                    |	Beasley	            |	ABeasley COR	        |	 United States (US) 	|	Sun Street	                |	 apt#43               	    |	Oslikmery	    |	IA	                |	27515	            |
 #     |	TJaiWing2	    |	TJaiWing2@gmail.com	      |	JaiWin21	|	Jairo	    |	Wing	    |	JaiWing COR	    |	 United States (US) 	|	Vine Avenue	        |	 apt#321         	|	Zrauktin	|	 IL    	|	60008	    |	12345678	|	Oliver	                |	Hargis	            |	OHargis COR	            |	 United States (US) 	|	Jewel Avenue	            |	 apt#43               	    |	Zecton	        |	OH	                |	27512	            |
