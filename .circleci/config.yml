@@ -1,11 +1,10 @@
 version: 2.1
-
 jobs:
-  build:
+  build-and-test:
     docker:
-      - image: cimg/openjdk:11.0  # Use the appropriate image for your Java project
+      - image: cimg/openjdk:11.0
     steps:
-      - checkout  # Checkout the code
+      - checkout
       # Install latest versions of browsers and their corresponding drivers
       - run:
           name: Install Browsers and WebDriverManager
@@ -22,46 +21,63 @@ jobs:
             wget -q https://github.com/mozilla/geckodriver/releases/download/v0.30.0/geckodriver-v0.30.0-linux64.tar.gz
             tar -xzf geckodriver-v0.30.0-linux64.tar.gz
             sudo mv geckodriver /usr/local/bin/
-
-      # Cache Maven dependencies to speed up builds
-      #      - restore_cache:
-      #          keys:
-      #            - v1-dependencies-{{ checksum "pom.xml" }}
-
-      # Install project dependencies with Maven
       - run:
-          name: Install dependencies
+          name: Clean and Build
           command: mvn clean install -DskipTests
-
-      # Save the new cache
-      - save_cache:
-          key: v1-dependencies-{{ checksum "pom.xml" }}
-          paths:
-            - ~/.m2/repository
-
-      # Run the Cucumber tests using Maven
       - run:
-          name: Run Cucumber tests
+          name: Test
           command: mvn test
-
-      # Store test results for later use
-      - run:
-          name: Create test results directory
-          command: mkdir -p /home/circleci/project/target/surefire-reports/store_test_results
-
       - store_test_results:
-          path: /home/circleci/project/target/surefire-reports
-      #          /home/circleci/pom7-circle-bdd/target/surefire-reports/store_test_results
+          path: target/surefire-reports/junitreports
       - store_artifacts:
-          path: target/surefire-reports
+          path: test-report
           destination: test-report
-
-
 workflows:
-  version: 2
-  build_and_test:
+  sample:
     jobs:
-      - build
+      - build-and-test
+
+#---------------------------------------------------------------------------------
+#      # Cache Maven dependencies to speed up builds
+#      #      - restore_cache:
+#      #          keys:
+#      #            - v1-dependencies-{{ checksum "pom.xml" }}
+#
+#      # Install project dependencies with Maven
+#      - run:
+#          name: Install dependencies
+#          command: mvn clean install -DskipTests
+#
+#      # Save the new cache
+#      - save_cache:
+#          key: v1-dependencies-{{ checksum "pom.xml" }}
+#          paths:
+#            - ~/.m2/repository
+#
+#      # Run the Cucumber tests using Maven
+#      - run:
+#          name: Run Cucumber tests
+#          command: mvn test
+#
+#      # Store test results for later use
+#      - run:
+#          name: Create test results directory
+##          command: mkdir -p /home/circleci/project/target/surefire-reports/store_test_results
+#
+#      - store_test_results:
+#          path: /home/circleci/project/target/surefire-reports
+#      #          /home/circleci/pom7-circle-bdd/target/surefire-reports/store_test_results
+#      - store_artifacts:
+#          path: target/surefire-reports
+#          destination: test-report
+#
+#
+#workflows:
+#  version: 2
+#  build_and_test:
+#    jobs:
+#      - build
+#        ------------------------------------------------------------
 ## Use the latest 2.1 version of CircleCI pipeline process engine.
 ## See: https://circleci.com/docs/configuration-reference
 #version: 2.1
