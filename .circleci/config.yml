@@ -51,7 +51,7 @@ jobs:
 #          command: mkdir -p /home/circleci/project/target/surefire-reports/store_test_results
 
       - store_test_results:
-          path: /home/circleci/git-collab-askomdch-tetiana/target/surefire-reports
+          path: /home/circleci/project/target/surefire-reports
       #          /home/circleci/pom7-circle-bdd/target/surefire-reports/store_test_results
       - store_artifacts:
           path: target/surefire-reports
