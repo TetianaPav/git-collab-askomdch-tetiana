@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="86.251" tests="14" skipped="0" failures="0" errors="0">
+<testcase classname="AskOmDch Login Feature" name="AskOmDch User Login Positive Uses Username Without Remember Me Checkbox" time="8.534">
+<system-out><![CDATA[
+Given user is on the home page..............................................passed
+When user clicks on account link............................................passed
+Then user should be able to see account page................................passed
+When user enters valid "vikusher1" and "123Ask" for login and clicks on login button.passed
+And user should be able to login successfully...............................passed
+Then user should be able to see "From your account dashboard you can view your recent orders, manage your shipping and billing addresses, and edit your password and account details." message.passed
+]]></system-out>
+</testcase>
+<testcase classname="AskOmDch Login Feature" name="AskOmDch User Login Positive Uses Email Without Remember Me Checkbox" time="6.093">
+<system-out><![CDATA[
+Given user is on the home page..............................................passed
+When user clicks on account link............................................passed
+Then user should be able to see account page................................passed
+When user enters valid "vikusher@gmail.com" and "123Ask" for login and clicks on login button.passed
+And user should be able to login successfully...............................passed
+Then user should be able to see "From your account dashboard you can view your recent orders, manage your shipping and billing addresses, and edit your password and account details." message.passed
+]]></system-out>
+</testcase>
+<testcase classname="AskOmDch Login Feature" name="AskOmDch User Login Positive With Remember Me Checkbox" time="7.436">
+<system-out><![CDATA[
+Given user is on the home page..............................................passed
+When user clicks on account link............................................passed
+Then user should be able to see account page................................passed
+When user enters valid "vikusher1" and "123Ask" for login...................passed
+And user checks remember me checkbox........................................passed
+And clicks on login button..................................................passed
+Then user should be able to see "From your account dashboard you can view your recent orders, manage your shipping and billing addresses, and edit your password and account details." message.passed
+]]></system-out>
+</testcase>
+<testcase classname="AskOmDch Login Feature" name="AskOmDch User Login Negative not Registered User uses email" time="4.692">
+<system-out><![CDATA[
+Given user is on the home page..............................................passed
+When user clicks on account link............................................passed
+Then user should be able to see account page................................passed
+When user enters valid "vikush@gmail.com" and "123Ask" for login and clicks on login button.passed
+Then user should be able to see "Unknown email address. Check again or try your username.".passed
+]]></system-out>
+</testcase>
+<testcase classname="AskOmDch Login Feature" name="AskOmDch User Login Negative not Registered User uses user name" time="5.474">
+<system-out><![CDATA[
+Given user is on the home page..............................................passed
+When user clicks on account link............................................passed
+Then user should be able to see account page................................passed
+When user enters valid "vikush" and "123Ask" for login and clicks on login button.passed
+Then user should be able to see "Error: The username " "vikush" " is not registered on this site. If you are unsure of your username, try your email address instead.".passed
+]]></system-out>
+</testcase>
+<testcase classname="AskOmDch Login Feature" name="AskOmDch User Login Negative not Valid Username Correct Password" time="4.852">
+<system-out><![CDATA[
+Given user is on the home page..............................................passed
+When user clicks on account link............................................passed
+Then user should be able to see account page................................passed
+When user enters not valid username or email "vikusher2" and correct password "123Ask" for login and clicks on login button.passed
+Then user should be able to see "Error: The username " "vikusher2" " is not registered on this site. If you are unsure of your username, try your email address instead.".passed
+]]></system-out>
+</testcase>
+<testcase classname="AskOmDch Login Feature" name="AskOmDch User Login Negative not Valid Email Correct Password" time="4.766">
+<system-out><![CDATA[
+Given user is on the home page..............................................passed
+When user clicks on account link............................................passed
+Then user should be able to see account page................................passed
+When user enters not valid username or email "vikush@gmail.com" and correct password "123Ask" for login and clicks on login button.passed
+Then user should be able to see "Unknown email address. Check again or try your username.".passed
+]]></system-out>
+</testcase>
+<testcase classname="AskOmDch Login Feature" name="AskOmDch User Login Negative not Correct Password Correct Username" time="4.977">
+<system-out><![CDATA[
+Given user is on the home page..............................................passed
+When user clicks on account link............................................passed
+Then user should be able to see account page................................passed
+When user enters valid "vikusher1" and "123Ask!!!" for login and clicks on login button.passed
+Then user should be able to see "Error: The password you entered for the username " "vikusher1" " is incorrect. Lost your password?".passed
+]]></system-out>
+</testcase>
+<testcase classname="AskOmDch Login Feature" name="AskOmDch User Login Negative not Correct Password Correct Email" time="5.468">
+<system-out><![CDATA[
+Given user is on the home page..............................................passed
+When user clicks on account link............................................passed
+Then user should be able to see account page................................passed
+When user enters valid "vikusher@gmail.com" and "123Ask!!!" for login and clicks on login button.passed
+Then user should be able to see "Error: The password you entered for the email address " "vikusher@gmail.com" " is incorrect. Lost your password?".passed
+]]></system-out>
+</testcase>
+<testcase classname="AskOmDch Login Feature" name="AskOmDch User Login Negative Empty Username/Email" time="5.251">
+<system-out><![CDATA[
+Given user is on the home page..............................................passed
+When user clicks on account link............................................passed
+Then user should be able to see account page................................passed
+When username or email field is blank and valid "123Ask" password and click on login button.passed
+Then user should be able to see "Error: Username is required."..............passed
+]]></system-out>
+</testcase>
+<testcase classname="AskOmDch Login Feature" name="AskOmDch User Login Negative Empty Password" time="6.245">
+<system-out><![CDATA[
+Given user is on the home page..............................................passed
+When user clicks on account link............................................passed
+Then user should be able to see account page................................passed
+When user enters valid username "vikusher1" and password field is blank and click on login button.passed
+Then user should be able to see "Error: The password field is empty.".......passed
+]]></system-out>
+</testcase>
+<testcase classname="AskOmDch Login Feature" name="AskOmDch User Reset Password With Registered username" time="8.146">
+<system-out><![CDATA[
+Given user is on the home page..............................................passed
+When user clicks on account link............................................passed
+Then user should be able to see account page................................passed
+When user click on lost your password link..................................passed
+Then user should be able to enter "vikusher1" username and click reset password button.passed
+And user should be able to see confirmation message "Password reset email has been sent.".passed
+]]></system-out>
+</testcase>
+<testcase classname="AskOmDch Login Feature" name="AskOmDch User Reset Password With Not Registered username" time="6.675">
+<system-out><![CDATA[
+Given user is on the home page..............................................passed
+When user clicks on account link............................................passed
+Then user should be able to see account page................................passed
+When user click on lost your password link..................................passed
+Then user should be able to enter "vikusher!!!" username and click reset password button.passed
+And user should be able to see "Invalid username or email." alert message...passed
+]]></system-out>
+</testcase>
+<testcase classname="AskOmDch Login Feature" name="AskOmDch User Reset Password With Empty username" time="7.476">
+<system-out><![CDATA[
+Given user is on the home page..............................................passed
+When user clicks on account link............................................passed
+Then user should be able to see account page................................passed
+When user click on lost your password link..................................passed
+Then user should be able to enter "" username and click reset password button.passed
+And user should be able to see "Enter a username or email address." alert message.passed
+]]></system-out>
+</testcase>
+</testsuite>
